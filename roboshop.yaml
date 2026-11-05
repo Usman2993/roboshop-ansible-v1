@@ -1,7 +1,6 @@
 - name: crecate ec2 instance and r53 records
   hosts: local
   connection: local
-  become: true
   vars:
     instances: ["mongodb", "redis", "mysql", "rabbitmq"]
     action: "create"
