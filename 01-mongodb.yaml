@@ -9,4 +9,4 @@
 
   - name: test the inventory variable
     debug:
-    msg: "{{ app_name }}"     
+      msg: "{{ app_name }}"     
