@@ -2,11 +2,11 @@
   hosts: mongodb
   become: yes
   tasks:
-    - name: copy mongo repo
-      copy:
-        src: mongo.repo
-        dest: /etc/yum.repos.d/mongo.repo
+  - name: copy mongo repo
+    copy:
+      src: mongo.repo
+      dest: /etc/yum.repos.d/mongo.repo
 
-    - name: test the inventory variable
-      debug:
-      msg: "{{ app_name }}"     
+  - name: test the inventory variable
+    debug:
+    msg: "{{ app_name }}"     
