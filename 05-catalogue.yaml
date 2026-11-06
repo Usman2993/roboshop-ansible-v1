@@ -77,7 +77,7 @@
     when: product_count.stdout | int == 0
 
   - name: daemon reload
-    system_service:
+    systemd_service:
       daemon_reload: true
 
   - name: start and enable catalogue
