@@ -66,7 +66,7 @@
       state: present
 
   - name: check products loaded or not 
-    command: mongosh --host <MONGODB-SERVER-IPADDRESS> --quiet --eval 'db.getSiblingDB("catalogue").products.countDocuments()'
+    command: mongosh --host "{{ mongodb_host }}" --quiet --eval 'db.getSiblingDB("catalogue").products.countDocuments()'
     register: product_count
 
   - name: print product_count   
