@@ -71,6 +71,7 @@
 
   - name: print product_count   
     debug:
+      msg: "{{ product_count }}"
 
   - name: load the products
     shell: mongosh --host "{{ mongodb_host }}" < /app/db/master-data.js        
@@ -82,6 +83,7 @@
 
   - name: start and enable catalogue
     service:
+      name: catalogue
       state: restarted
       enabled: yes       
 
