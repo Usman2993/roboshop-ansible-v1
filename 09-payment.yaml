@@ -2,11 +2,11 @@
   hosts: payment
   become: yes
   tasks:
-  - name: install paython3.14
+  - name: install python3.14
     dnf:
       name:
-      - paython3.14
-      - paython3.14-pip
+      - python3.14
+      - python3.14-pip
       state: present
 
   - name: create roboshop system user
